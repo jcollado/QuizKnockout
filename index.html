@@ -9,13 +9,22 @@
     <body>
         <h1>Quiz</h1>
 
-        <form>
-            <div>
-                <p id="question"></p>
-                <ul id="choices"></ul>
-            </div>
+        <form id="question">
+            <p id="question_progress">
+                Question
+                <span id="question_index">?</span>
+                of
+                <span id="question_count">?</span>
+            </p>
+            <p id="question_text"></p>
+            <ul id="question_choices"></ul>
             <input type="submit" value="Submit answer">
         </form>
+
+        <div id="summary">
+            <p>This is the summary</p>
+            <input id="new_game" type="submit" value="New game">
+        </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript" src="application.js"></script>

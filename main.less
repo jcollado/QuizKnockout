@@ -55,12 +55,19 @@ h1 {
     margin-bottom: 20px;
 }
 
-form {
+#question {
+    position: relative;
     width: 400px;
     margin: auto;
     background: red;
 
-    p {
+    #question_progress {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #question_text {
         font-size: 20px;
         margin-bottom: 10px;
     }
@@ -73,4 +80,9 @@ form {
         margin: 15px auto 0;
         display: block;
     }
+}
+
+#summary {
+    display: none;
+    text-align: center;
 }
