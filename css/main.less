@@ -49,24 +49,31 @@ table {
 
 /* CSS reset ends here */
 
+// Variables to display scores nicely as stars
+@star-size: 22px;
+@num-questions: 5;
+@star-margin: 5px;
+
+
 h1 {
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 25px;
     text-align: center;
     margin-bottom: 20px;
 }
 
+p, li {
+    font-size: 20px;
+}
+
 #question {
-    width: 400px;
+    width: 600px;
     margin: auto;
-
-    #question_progress {
-        float: right;
-    }
-
-    #question_code {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
 
     li {
         margin-top: 5px;
@@ -77,6 +84,47 @@ h1 {
         display: block;
     }
 }
+
+#question_progress {
+    float: left;
+    line-height: @star-size;
+}
+
+#score {
+    float: right;
+    width: @star-size * @num-questions + @star-margin * (@num-questions - 1);
+    margin: auto;
+    text-align: center;
+}
+
+.star {
+    background-image: url("/img/gray-star.png");
+    width: @star-size;
+    height: @star-size;
+    display: inline-block;
+
+}
+
+.star:not(:last-child) {
+    margin-right: @star-margin;
+}
+
+.right-answer {
+    background-image: url("/img/yellow-star.png");
+}
+
+#question_code {
+    clear: both;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+#question_code pre {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
 
 #summary {
     display: none;

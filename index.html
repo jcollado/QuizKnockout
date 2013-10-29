@@ -9,6 +9,7 @@
     </head>
     <body>
         <h1>Quiz</h1>
+        <h2>Guess the programming language</h2>
 
         <form id="question">
             <p id="question_progress">
@@ -17,8 +18,11 @@
                 of
                 <span id="question_count">?</span>
             </p>
-            <p>Guess the programming language</p>
+
+            <div id="score"></div>
+
             <div id="question_code"></div>
+            <p>Available options:</p>
             <ul id="question_choices"></ul>
             <input type="submit" value="Submit answer">
         </form>
