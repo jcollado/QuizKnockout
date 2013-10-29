@@ -77,11 +77,23 @@ p, li {
 
     li {
         margin-top: 5px;
+        padding: 5px;
     }
 
-    input[type=submit] {
-        margin: 15px auto 0;
-        display: block;
+    li:hover {
+        background: #eee;
+    }
+
+    li:nth-child(odd) {
+        background: #ccc;
+    }
+
+    li:nth-child(odd):hover {
+        background: #eee;
+    }
+
+    li.highlight {
+        border: 1px solid red;
     }
 }
 
@@ -125,7 +137,18 @@ p, li {
     padding: 10px;
 }
 
+input[type=submit] {
+    display: block;
+    font-size: 20px;
+    margin: 15px auto 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: linear-gradient(#eee, #aaa);
+}
 
+input[type=submit]:hover {
+    box-shadow: 3px 3px #ddd;
+}
 
 #summary {
     display: none;
