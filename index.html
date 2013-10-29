@@ -8,35 +8,37 @@
         <script src="lib/less-1.5.0.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <h1>Quiz</h1>
-        <h2>Guess the programming language</h2>
+        <div id="content">
+            <h1>Quiz</h1>
+            <h2>Guess the programming language</h2>
 
-        <form id="question">
-            <p id="question_progress">
-                Question
-                <span id="question_index">?</span>
-                of
-                <span id="question_count">?</span>
-            </p>
+            <form id="question">
+                <p id="question_progress">
+                    Question
+                    <span id="question_index">?</span>
+                    of
+                    <span id="question_count">?</span>
+                </p>
 
-            <div id="score"></div>
+                <div id="score"></div>
 
-            <div id="question_code"></div>
-            <p>Available options:</p>
-            <ul id="question_choices"></ul>
+                <div id="question_code"></div>
+                <p>Available options:</p>
+                <ul id="question_choices"></ul>
 
-            <p id="error">Sorry, the right answer was <span id="answer">?</span></p>
+                <p id="error">Sorry, the right answer was <span id="answer">?</span></p>
 
-            <input id="submit_answer" type="submit" value="Submit answer">
-            <input id="continue" type="submit" value="Continue">
-        </form>
+                <input id="submit_answer" type="submit" value="Submit answer">
+                <input id="continue" type="submit" value="Continue">
+            </form>
 
 
-        <div id="summary">
-            <p>Your score is: <span id="score_number">?</span> / <span id="score_total">?</span><p>
-            <div id="score_summary"></div>
-            <p id="feedback"></p>
-            <input id="new_game" type="submit" value="New game">
+            <div id="summary">
+                <p>Your score is: <span id="score_number">?</span> / <span id="score_total">?</span><p>
+                <div id="score_summary"></div>
+                <p id="feedback"></p>
+                <input id="new_game" type="submit" value="New game">
+            </div>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
