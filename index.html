@@ -26,7 +26,7 @@
                     <pre class="prettyprint"><code data-bind="text: currentQuestion().code"></code></pre>
                 </div>
                 <p>Available options:</p>
-                <ul id="question_choices" data-bind="foreach: currentQuestion().choices()">
+                <ul data-bind="foreach: currentQuestion().choices()">
                     <li data-bind="click: $parent.onItemClick">
                         <input type="radio" name="choice" data-bind="checkedValue: $data, checked: $parent.currentQuestion().selectedChoice">
                         <!--ko text: $data--><!--/ko-->
