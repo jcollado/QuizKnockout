@@ -27,7 +27,7 @@
                 <ul data-bind="foreach: currentQuestion().choices()">
                     <li data-bind="click: $parent.onItemClick, css: { highlight: $parent.highlightCorrectAnswer($data) }">
                         <input type="radio" name="choice"
-                               data-bind="checkedValue: $data, checked: $parent.currentQuestion().selectedChoice">
+                               data-bind="checkedValue: $data, checked: $parent.currentQuestion().selectedChoice, disable: $parent.wrongAnswerSubmitted()">
                         <!--ko text: $data--><!--/ko-->
                     </li>
                 </ul>
