@@ -22,9 +22,13 @@
 
                 <div id="score"></div>
 
-                <div id="question_code"></div>
+                <div id="question_code">
+                    <pre class="prettyprint"><code data-bind="text: currentQuestion().code"></code></pre>
+                </div>
                 <p>Available options:</p>
-                <ul id="question_choices"></ul>
+                <ul id="question_choices" data-bind="foreach: currentQuestion().choices()">
+                    <li><input type="radio"><!--ko text: $data--><!--/ko--></li>
+                </ul>
 
                 <p id="error">Sorry, the right answer was <span id="answer">?</span></p>
 
