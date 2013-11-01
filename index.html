@@ -27,7 +27,7 @@
                 </div>
                 <p>Available options:</p>
                 <ul id="question_choices" data-bind="foreach: currentQuestion().choices()">
-                    <li>
+                    <li data-bind="click: $parent.onItemClick">
                         <input type="radio" name="choice" data-bind="checkedValue: $data, checked: $parent.currentQuestion().selectedChoice">
                         <!--ko text: $data--><!--/ko-->
                     </li>
