@@ -12,7 +12,7 @@
             <h1>Quiz</h1>
             <h2>Guess the programming language</h2>
 
-            <form id="question" data-bind="submit: onFormSubmit">
+            <form id="question" data-bind="submit: onFormSubmit, visible: !quizFinished()">
                 <p id="question_progress">
                     Question
                     <span data-bind="text: currentQuestionIndex() + 1">?</span>
@@ -39,11 +39,11 @@
             </form>
 
 
-            <div id="summary">
-                <p>Your score is: <span id="score_number">?</span> / <span id="score_total">?</span><p>
+            <div id="summary" data-bind="visible: quizFinished()">
+                <p>Your score is: <span data-bind="text: score()">?</span> / <span data-bind="text: questions().length">?</span><p>
                 <div id="score_summary"></div>
                 <p id="feedback"></p>
-                <input id="new_game" type="submit" value="New game">
+                <input id="new_game" type="submit" value="New game" data-bind="click: onNewGameClick">
             </div>
         </div>
 
