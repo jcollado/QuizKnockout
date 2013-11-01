@@ -22,9 +22,7 @@
 
                 <div id="score" data-bind="foreach: questions()"><span class="star"></span></div>
 
-                <div id="question_code">
-                    <pre class="prettyprint"><code data-bind="text: currentQuestion().code"></code></pre>
-                </div>
+                <div id="question_code"></div>
                 <p>Available options:</p>
                 <ul data-bind="foreach: currentQuestion().choices()">
                     <li data-bind="click: $parent.onItemClick">
