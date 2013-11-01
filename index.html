@@ -20,7 +20,7 @@
                     <span data-bind="text: questions().length">?</span>
                 </p>
 
-                <div id="score"></div>
+                <div id="score" data-bind="foreach: questions()"><span class="star"></span></div>
 
                 <div id="question_code">
                     <pre class="prettyprint"><code data-bind="text: currentQuestion().code"></code></pre>
