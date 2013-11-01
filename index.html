@@ -25,18 +25,17 @@
                 <div id="question_code"></div>
                 <p>Available options:</p>
                 <ul data-bind="foreach: currentQuestion().choices()">
-                    <li data-bind="click: $parent.onItemClick, \
-                                   css: { highlight: $parent.errorFound() && $data == $parent.currentQuestion().correctChoice }">
+                    <li data-bind="click: $parent.onItemClick, css: { highlight: $parent.wrongAnswerSubmitted() && $data == $parent.currentQuestion().correctChoice}">
                         <input type="radio" name="choice"
                                data-bind="checkedValue: $data, checked: $parent.currentQuestion().selectedChoice">
                         <!--ko text: $data--><!--/ko-->
                     </li>
                 </ul>
 
-                <p id="error" data-bind="visible: errorFound()">Sorry, the right answer was <span data-bind="text: currentQuestion().correctChoice">?</span></p>
+                <p id="error" data-bind="visible: wrongAnswerSubmitted()">Sorry, the right answer was <span data-bind="text: currentQuestion().correctChoice">?</span></p>
 
-                <input id="submit_answer" type="submit" value="Submit answer" data-bind="visible: !errorFound(), click: onSubmitClick">
-                <input id="continue" type="submit" value="Continue" data-bind="visible: errorFound(), click: onContinueClick">
+                <input id="submit_answer" type="submit" value="Submit answer" data-bind="visible: !wrongAnswerSubmitted(), click: onSubmitClick">
+                <input id="continue" type="submit" value="Continue" data-bind="visible: wrongAnswerSubmitted(), click: onContinueClick">
             </form>
 
 
