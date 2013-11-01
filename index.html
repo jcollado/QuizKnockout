@@ -15,7 +15,7 @@
             <form id="question">
                 <p id="question_progress">
                     Question
-                    <span id="question_index">?</span>
+                    <span data-bind="text: currentQuestionIndex() + 1">?</span>
                     of
                     <span data-bind="text: questions().length">?</span>
                 </p>
