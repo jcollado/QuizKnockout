@@ -12,7 +12,7 @@
             <h1>Quiz</h1>
             <h2>Guess the programming language</h2>
 
-            <form id="question">
+            <form id="question" data-bind="submit: onFormSubmit">
                 <p id="question_progress">
                     Question
                     <span data-bind="text: currentQuestionIndex() + 1">?</span>
