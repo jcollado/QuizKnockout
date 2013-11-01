@@ -42,7 +42,7 @@
             <div id="summary" data-bind="visible: quizFinished()">
                 <p>Your score is: <span data-bind="text: score()">?</span> / <span data-bind="text: questions().length">?</span><p>
                 <div id="score_summary" data-bind="foreach: questions()"><span class="star"></span></div>
-                <p id="feedback"></p>
+                <p data-bind="text: feedback()"></p>
                 <input id="new_game" type="submit" value="New game" data-bind="click: onNewGameClick">
             </div>
         </div>
