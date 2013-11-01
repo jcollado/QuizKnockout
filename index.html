@@ -32,7 +32,7 @@
                     </li>
                 </ul>
 
-                <p id="error" data-bind="visible: wrongAnswerSubmitted()">Sorry, the right answer was <span data-bind="text: currentQuestion().correctChoice">?</span></p>
+                <p id="error">Sorry, the right answer was <span data-bind="text: currentQuestion().correctChoice">?</span></p>
 
                 <input id="submit_answer" type="submit" value="Submit answer" data-bind="visible: !wrongAnswerSubmitted(), click: onSubmitClick">
                 <input id="continue" type="submit" value="Continue" data-bind="visible: wrongAnswerSubmitted(), click: onContinueClick">
