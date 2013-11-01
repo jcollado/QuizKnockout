@@ -12,7 +12,7 @@
             <h1>Quiz</h1>
             <h2>Guess the programming language</h2>
 
-            <form id="question" data-bind="submit: onFormSubmit, visible: !quizFinished()">
+            <form data-bind="submit: onFormSubmit, visible: !quizFinished()">
                 <p id="question_progress">
                     Question
                     <span data-bind="text: currentQuestionIndex() + 1">?</span>
@@ -32,10 +32,10 @@
                     </li>
                 </ul>
 
-                <p id="error">Sorry, the right answer was <span data-bind="text: currentQuestion().correctChoice">?</span></p>
+                <p id="error_message">Sorry, the right answer was <span data-bind="text: currentQuestion().correctChoice">?</span></p>
 
-                <input id="submit_answer" type="submit" value="Submit answer" data-bind="visible: !wrongAnswerSubmitted(), click: onSubmitClick">
-                <input id="continue" type="submit" value="Continue" data-bind="visible: wrongAnswerSubmitted(), click: onContinueClick">
+                <input type="submit" value="Submit answer" data-bind="visible: !wrongAnswerSubmitted(), click: onSubmitClick">
+                <input type="submit" value="Continue" data-bind="visible: wrongAnswerSubmitted(), click: onContinueClick">
             </form>
 
 
@@ -43,7 +43,7 @@
                 <p>Your score is: <span data-bind="text: score()">?</span> / <span data-bind="text: questions().length">?</span><p>
                 <div id="score_summary" data-bind="foreach: questions()"><span class="star"></span></div>
                 <p data-bind="text: feedback()"></p>
-                <input id="new_game" type="submit" value="New game" data-bind="click: onNewGameClick">
+                <input type="submit" value="New game" data-bind="click: onNewGameClick">
             </div>
         </div>
 
