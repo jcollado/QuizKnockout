@@ -25,7 +25,7 @@
                 <div id="question_code"></div>
                 <p>Available options:</p>
                 <ul data-bind="foreach: currentQuestion().choices()">
-                    <li data-bind="click: $parent.onItemClick, css: { highlight: $parent.wrongAnswerSubmitted() && $data == $parent.currentQuestion().correctChoice}">
+                    <li data-bind="click: $parent.onItemClick, css: { highlight: $parent.highlightCorrectAnswer($data) }">
                         <input type="radio" name="choice"
                                data-bind="checkedValue: $data, checked: $parent.currentQuestion().selectedChoice">
                         <!--ko text: $data--><!--/ko-->
