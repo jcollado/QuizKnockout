@@ -1,0 +1,31 @@
+[
+    {
+        "code": "#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\n\nint main(void)\n{\n    printf(\"Hello, world!\");\n    return EXIT_SUCCESS;\n}",
+        "choices": ["c", "c++", "java", "d", "go"],
+        "correctChoice": "c"
+    },
+
+    {
+        "code": "#include &lt;iostream&gt;\nusing namespace std;\nint main()\n{\n    cout << \"Hello, world!\" << endl;\n    return 0;\n}",
+        "choices": ["c", "c++", "java", "d", "go"],
+        "correctChoice": "c++"
+    },
+
+    {
+        "code": "public class HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, world!\");\n    }\n}",
+        "choices": ["c", "c++", "java", "d", "go"],
+        "correctChoice": "java"
+    },
+
+    {
+        "code": "import std.stdio;\n\nvoid main()\n{\n    writeln(\"Hello, world!\");\n}",
+        "choices": ["c", "c++", "java", "d", "go"],
+        "correctChoice": "d"
+    },
+
+    {
+        "code": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    fmt.Println(\"Hello, world!\")\n}",
+        "choices": ["c", "c++", "java", "d", "go"],
+        "correctChoice": "go"
+    }
+]
