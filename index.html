@@ -32,7 +32,8 @@
                     </li>
                 </ul>
 
-                <p id="error_message" data-bind="slide: wrongAnswerSubmitted()">Sorry, the right answer was <span data-bind="text: currentQuestion().correctChoice">?</span>
+                <p id="error_message" data-bind="slide: wrongAnswerSubmitted()">
+                    Sorry, the right answer was <span data-bind="text: updateCorrectAnswerText($element)">?</span>
                 </p>
 
                 <input type="submit" value="Submit answer" data-bind="visible: !wrongAnswerSubmitted(), click: onSubmitClick">
